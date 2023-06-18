@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.my.dao.EmployeeMapper">
+
+    <select id="queryAllEmployee" resultType="com.my.vo.Employee">
+        SELECT * FROM employee
+    </select>
+    <insert id="insertEmployee">
+        insert into employee  values
+            (#{employeeId},#{employeeName},#{employeeSex},#{employeeDepartment},#{employeeDutyType})
+    </insert>
+
+    <delete id="deleteEmployeeById" >
+        delete from employee where EmpliyeeId=#{EmpliyeeId}
+    </delete>
+
+    <update id="updateEmployee">
+        update employee set employeeName =#{employeeName}, employeeSex= #{employeeSex},
+        employeeDepartment= #{employeeDepartment},employeeDutyType = #{employeeDutyType}
+        where employeeId = #{employeeId}
+    </update>
+
+    <select id="queryEmployeeById" resultType="com.my.vo.Employee">
+        select * from employee where employeeId=#{employeeId}
+    </select>
+</mapper>
