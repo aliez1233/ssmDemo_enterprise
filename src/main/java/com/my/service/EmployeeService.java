@@ -15,5 +15,4 @@ public interface EmployeeService {
 
     int deleteEmployeeById(int id);//根据id删除员工
 
-    int deleteEmployeeByName(String name);//根据id删除员工
 }

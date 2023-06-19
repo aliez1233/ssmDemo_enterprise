@@ -35,8 +35,4 @@ public class EmployeeServiceImpl implements EmployeeService {
         return e;
     }
 
-    public int deleteEmployeeByName(String name) {
-        int e= employeeMapper.deleteEmployeeByName(name);
-        return e;
-    }
 }
