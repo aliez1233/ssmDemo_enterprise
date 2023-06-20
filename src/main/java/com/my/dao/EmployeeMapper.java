@@ -1,23 +1,17 @@
 package com.my.dao;
 
-import com.my.vo.Employee;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
-
+import com.my.vo.Employees;
 import java.util.List;
-@Mapper
-@Repository
+
 public interface EmployeeMapper {
-    List <Employee> queryAllEmployee();//查询全部员工，返回list列表
+    List <Employees> queryAllEmployee();//查询全部员工，返回list列表
 
-    int insertEmployee();//添加员工
+    int insertEmployee(Employees employee);//添加员工
 
-    int updateEmployee(Employee employee);//更新员工
+    int updateEmployee(Employees employee);//更新员工
 
-    Employee queryEmployeeById(int id);//根据id查询，返回员工
+    Employees queryEmployeeById(int id);//根据id查询，返回员工
 
     int deleteEmployeeById(int id);//根据id删除员工
-
-    int deleteEmployeeByName(String name);//根据id删除员工
 
 }

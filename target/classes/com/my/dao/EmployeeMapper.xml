@@ -3,7 +3,7 @@
 
 <mapper namespace="com.my.dao.EmployeeMapper">
 
-    <select id="queryAllEmployee" resultType="com.my.vo.Employee">
+    <select id="queryAllEmployee" resultType="com.my.vo.Employees">
         SELECT * FROM employee
     </select>
     <insert id="insertEmployee">
@@ -12,7 +12,7 @@
     </insert>
 
     <delete id="deleteEmployeeById" >
-        delete from employee where EmpliyeeId=#{EmpliyeeId}
+        delete from employee where employeeId=#{employeeId}
     </delete>
 
     <update id="updateEmployee">
@@ -21,7 +21,7 @@
         where employeeId = #{employeeId}
     </update>
 
-    <select id="queryEmployeeById" resultType="com.my.vo.Employee">
+    <select id="queryEmployeeById" resultType="com.my.vo.Employees">
         select * from employee where employeeId=#{employeeId}
     </select>
 </mapper>
