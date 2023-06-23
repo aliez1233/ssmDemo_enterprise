@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.dao.ItemDao">
+    <!-- List<Books> queryALLBook() -->
+    <select id="queryALLItem" resultType="com.my.vo.Item">
+        SELECT * FROM item
+    </select>
+    <!-- int insertBook(Books book) -->
+    <insert id="insertItem">
+        insert into item
+            VALUE(#{itemId},#{itemName},#{itemTitle},#{itemDate}),#{itemContent})
+    </insert>
+    <!-- int updateBook(Books book) -->
+    <update id="updateItem">
+        update item set itemName = #{itemName},userName = #{userName},itemTitle =
+            #{itemTitle},itemDate = #{itemDate},itemContent = #{itemContent}
+        where itemId = #{itemId}
+    </update>
+    <!-- Books queryBookById(int id) -->
+    <select id="queryItemById" resultType="com.my.vo.Item">
+        select * from item where itemId=#{itemId}
+    </select>
+    <!-- int deleteBookById(int id) -->
+    <delete id="deleteItemById">
+        delete from item where itemId=#{itemId}
+    </delete>
+</mapper>
