@@ -20,7 +20,7 @@
 		</div>
 		<div class="row">
 			<form class="form-horizontal" action="${pageContext.request.contextPath}/employee/updateEmployee">
-				<input type="hidden" name="bookID" value="${employee.getEmployeeId()}"/>
+				<input type="hidden" name="employeeId" value="${employee.getEmployeeId()}"/>
 				<div class="form-group">
 					<label for="employeeName" class="col-sm-2 control-label">书籍名称：</label>
 					<div class="col-sm-4">
