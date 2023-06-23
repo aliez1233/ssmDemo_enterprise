@@ -12,7 +12,7 @@
         insert into attendance
             VALUES (#{attendanceId},#{employeeId},#{employeeName},#{appearTimes},#{leaveTimes},#{lateEarlyLeave},#{absentWork},#{overtime})
     </insert>
-    <!-- int updateAttendance(Attendance attendance) -->
+    <!-- int updateAttendance(Attendance attendance)  -->
     <update id="updateAttendance">
         update attendance set employeeId=#{employeeId},employeeName=#{employeeName},appearTimes=#{appearTimes},leaveTimes=#{leaveTimes},lateEarlyLeave=#{lateEarlyLeave},absentWork=#{absentWork},overtime=#{overtime}
         where attendanceId=#{attendanceId}

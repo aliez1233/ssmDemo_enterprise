@@ -45,6 +45,7 @@
                     <input type="text" class="form-control" id="fileStatus" name="fileStatus" value="${file.getFileStatus()}">
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">提交 </button>

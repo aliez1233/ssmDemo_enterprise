@@ -7,7 +7,7 @@
     <select id="queryAllFile" resultType="com.my.vo.File">
         SELECT * FROM file
     </select>
-    <!-- int insertFile(File file) -->
+    <!-- int insertFile(File file)  -->
     <insert id="insertFile">
         insert into file
             VALUE(#{fileId},#{fileTitle},#{fromUserName},#{toUserName},#{fileStatus})

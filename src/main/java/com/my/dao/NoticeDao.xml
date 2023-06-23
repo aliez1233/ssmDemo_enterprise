@@ -7,7 +7,7 @@
     <select id="queryAllNotice" resultType="com.my.vo.Notice">
         SELECT *from notice
     </select>
-    <!-- int insertNotice(Notice notice) -->
+    <!-- int insertNotice(Notice notice)  -->
     <insert id="insertNotice">
         insert into notice
             VALUE (#{noticeId},#{title},#{detail},#{noticeDate})

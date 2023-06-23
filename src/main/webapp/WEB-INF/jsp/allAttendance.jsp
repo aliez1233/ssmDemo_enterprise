@@ -50,7 +50,6 @@
                         <td>${attendance.lateEarlyLeave}</td>
                         <td>${attendance.absentWork}</td>
                         <td>${attendance.overtime}</td>
-
                         <td><a href="${pageContext.request.contextPath}/attendance/toUpdateAttendance?id=${attendance.getAttendanceId()}">更改</a>|
                             <a href="${pageContext.request.contextPath}/attendance/delete/${attendance.getAttendanceId()}">删除</a></td>
                     </tr>

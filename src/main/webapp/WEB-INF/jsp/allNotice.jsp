@@ -80,7 +80,8 @@
                         <li><a
                                 href="${pageContext.request.contextPath}/notice/allNotice?pn=${pageInfo.pageNum+1}"
                                 aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                        </a></li>
+                        </a>
+                        </li>
                     </c:if>
                     <li>
                     <a href="${pageContext.request.contextPath}/notice/allNotice?pn="${pageInfo.pages}>末页</a>

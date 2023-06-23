@@ -52,6 +52,7 @@
                     <input type="text" class="form-control" id="lateEarlyLeave" name="lateEarlyLeave" value="${attendance.getLateEarlyLeave()}">
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="absentWork" class="col-sm-2 control-label">旷工天数：</label>
                 <div class="col-sm-4">

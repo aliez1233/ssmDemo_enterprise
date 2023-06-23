@@ -9,6 +9,7 @@
           crossorigin="anonymous">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <meta charset="UTF-8">
+
     <title>公告信息</title>
 </head>
 <body>
