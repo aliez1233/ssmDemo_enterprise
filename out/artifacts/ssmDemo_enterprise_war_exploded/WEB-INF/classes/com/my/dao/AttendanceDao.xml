@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.dao.AttendanceDao">
+    <!-- List<Attendance> queryAllAttendance() -->
+    <select id="queryAllAttendance" resultType="com.my.vo.Attendance">
+        SELECT *FROM attendance
+    </select>
+    <!-- int insertAttendance(Attendance attendance) -->
+    <insert id="insertAttendance">
+        insert into attendance
+            VALUES (#{attendanceId},#{employeeId},#{employeeName},#{appearTimes},#{leaveTimes},#{lateEarlyLeave},#{absentWork},#{overtime})
+    </insert>
+    <!-- int updateAttendance(Attendance attendance) -->
+    <update id="updateAttendance">
+        update attendance set employeeId=#{employeeId},employeeName=#{employeeName},appearTimes=#{appearTimes},leaveTimes=#{leaveTimes},lateEarlyLeave=#{lateEarlyLeave},absentWork=#{absentWork},overtime=#{overtime}
+        where attendanceId=#{attendanceId}
+    </update>
+    <!-- Attendance queryAttendanceById(int id) -->
+    <select id="queryAttendanceById" resultType="com.my.vo.Attendance">
+        select *from attendance where attendanceId=#{attendanceId}
+    </select>
+    <!-- int deleteAttendanceById(int id) -->
+
+    <delete id="deleteAttendanceById" parameterType="int">
+        DELETE FROM attendance WHERE attendanceId=#{attendanceId}
+    </delete>
+
+</mapper>

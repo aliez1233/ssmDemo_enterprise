@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.dao.NoticeDao">
+    <!-- List<Notice> queryAllNotice() -->
+    <select id="queryAllNotice" resultType="com.my.vo.Notice">
+        SELECT *from notice
+    </select>
+    <!-- int insertNotice(Notice notice) -->
+    <insert id="insertNotice">
+        insert into notice
+            VALUE (#{noticeId},#{title},#{detail},#{noticeDate})
+    </insert>
+    <!-- int updateNotice(Notice notice) -->
+    <update id="updateNotice">
+        update notice set title=#{title},detail=#{detail},noticeDate=#{noticeDate}
+        where noticeId=#{noticeId}
+    </update>
+    <!-- Notice queryNoticeById(int id) -->
+    <select id="queryNoticeById" resultType="com.my.vo.Notice">
+        select *from notice where noticeId =#{noticeId}
+    </select>
+    <!-- int deleteNoticeById(int id) -->
+    <delete id="deleteNoticeById">
+        delete from notice where noticeId=#{noticeId}
+    </delete>
+</mapper>
